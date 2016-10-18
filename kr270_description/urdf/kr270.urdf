@@ -1,0 +1,385 @@
+<?xml version="1.0" ?>
+<robot name="kr270">
+
+<!------------------------------------ Links ----------------------------------->
+
+	<link name="world"/>
+
+	<link name="socket">
+		<inertial>
+			<mass value="1"/>
+			<origin rpy="0 0 0" xyz="0 0 0.1"/>
+			<inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+		</inertial>
+
+		<collision name="collision_1">
+			<origin rpy="0 0 0" xyz="0 0 0.1"/>
+			<geometry>
+				<box size=".7 .7 .2"/>
+			</geometry>
+		</collision>
+
+		<collision name="collision_2">
+			<origin rpy="0 0 0" xyz=".4 0 0.2"/>
+			<geometry>
+				<box size=".3 .3 .3"/>
+			</geometry>
+		</collision>
+
+		<visual name="visual_collision_1">
+			<origin rpy="0 0 0" xyz="0 0 0.1"/>
+			<geometry>
+				<box size=".7 .7 .2"/>
+			</geometry>
+		</visual>
+
+		<visual name="visual_collision_2">
+			<origin rpy="0 0 0" xyz=".4 0 0.2"/>
+			<geometry>
+				<box size=".3 .3 .3"/>
+			</geometry>
+		</visual>
+
+<!--
+		<visual name="visual_mesh">
+			<origin rpy="1.5707 0 0" xyz="0 0 0"/>
+			<geometry>
+				<mesh filename="package://kr270_description/meshes/socket.dae"/>
+			</geometry>
+		</visual>
+-->
+	</link>
+
+	<link name="a1">
+		<inertial>
+			<mass value="1"/>
+			<origin rpy="0 0 0" xyz="0 0 0.2"/>
+			<inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+		</inertial>
+
+		<collision name="collision_1">
+			<origin rpy="0 0 0" xyz="0 0 0.2"/>
+			<geometry>
+				<cylinder length=".4" radius=".225"/>
+			</geometry>
+		</collision>
+
+		<collision name="collision_2">
+			<origin rpy="1.5707 0 0" xyz="-.35 -.15 .4"/>
+			<geometry>
+				<cylinder length=".3" radius=".2"/>
+			</geometry>
+		</collision>
+
+		<collision name="collision_3">
+			<origin rpy="0 0 0" xyz=".25 0 .3"/>
+			<geometry>
+				<box size=".5 .25 .3"/>
+			</geometry>
+		</collision>
+
+		<visual name="visual_collision_1">
+			<origin rpy="0 0 0" xyz="0 0 0.2"/>
+			<geometry>
+				<cylinder length=".4" radius=".225"/>
+			</geometry>
+		</visual>
+
+		<visual name="visual_collision_2">
+			<origin rpy="1.5707 0 0" xyz="-.35 -.15 .4"/>
+			<geometry>
+				<cylinder length=".3" radius=".2"/>
+			</geometry>
+		</visual>
+
+		<visual name="visual_collision_3">
+			<origin rpy="0 0 0" xyz=".25 0 .3"/>
+			<geometry>
+				<box size=".5 .25 .3"/>
+			</geometry>
+		</visual>
+
+<!--
+		<visual name="visual_mesh">
+			<origin rpy="1.5707 0 0" xyz="0 0 0"/>
+			<geometry>
+				<mesh filename="package://kr270_description/meshes/a1.dae"/>
+			</geometry>
+		</visual>
+-->
+	</link>
+
+	<link name="a2">
+		<inertial>
+			<mass value="1"/>
+			<origin rpy="0 0 0" xyz="0 0 0.7"/>
+			<inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+		</inertial>
+
+		<collision name="collision_1">
+			<origin rpy="0 0 0" xyz="0 0 .6"/>
+			<geometry>
+				<box size=".3 .3 1.3"/>
+			</geometry>
+		</collision>
+
+		<collision name="collision_2">
+			<origin rpy="1.5707 0 0" xyz="0 -.2 0"/>
+			<geometry>
+				<cylinder length=".2" radius=".2"/>
+			</geometry>
+		</collision>
+
+		<visual name="visual_collision_1">
+			<origin rpy="0 0 0" xyz="0 0 .6"/>
+			<geometry>
+				<box size=".3 .3 1.3"/>
+			</geometry>
+		</visual>
+
+		<visual name="visual_collision_2">
+			<origin rpy="1.5707 0 0" xyz="0 -.2 0"/>
+			<geometry>
+				<cylinder length=".2" radius=".2"/>
+			</geometry>
+		</visual>
+
+<!--
+		<visual name="visual_mesh">
+			<origin rpy="1.5707 0 0" xyz="0 -.3 0"/>
+			<geometry>
+				<mesh filename="package://kr270_description/meshes/a2.dae"/>
+			</geometry>
+		</visual>
+-->
+	</link>
+
+	<link name="a3">
+		<inertial>
+			<mass value="1"/>
+			<origin rpy="0 0 0" xyz="-0.15 0 0"/>
+			<inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+		</inertial>
+
+		<collision name="collision_1">
+			<origin rpy="0 1.5707 0" xyz="-.2 0 0"/>
+			<geometry>
+				<cylinder length="1.2" radius="0.15"/>
+			</geometry>
+		</collision>
+
+		<collision name="collision_2">
+			<origin rpy="0 0 0" xyz="-.4 -.15 .25"/>
+			<geometry>
+				<box size=".6 .4 .15"/>
+			</geometry>
+		</collision>
+
+		<visual name="visual_collision_1">
+			<origin rpy="0 1.5707 0" xyz="-.2 0 0"/>
+			<geometry>
+				<cylinder length="1.2" radius="0.15"/>
+			</geometry>
+		</visual>]
+
+		<visual name="visual_collision_2">
+			<origin rpy="0 0 0" xyz="-.4 -.15 .25"/>
+			<geometry>
+				<box size=".6 .4 .15"/>
+			</geometry>
+		</visual>
+
+<!--
+		<visual name="visual_mesh">
+			<origin rpy="1.5707 0 0" xyz=".35 0 -1.825"/>
+			<geometry>
+				<mesh filename="package://kr270_description/meshes/a3.dae"/>
+			</geometry>
+		</visual>
+-->
+	</link>
+
+	<link name="a4">
+		<inertial>
+			<mass value="1"/>
+			<origin rpy="0 0 0" xyz="0 0 0"/>
+			<inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+		</inertial>
+
+		<collision name="collision">
+			<origin rpy="0 1.5707 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder length="0.5" radius="0.1"/>
+			</geometry>
+		</collision>
+
+		<visual name="visual_collision">
+			<origin rpy="0 1.5707 0" xyz="0 0 0"/>
+			<geometry>
+				<cylinder length="0.5" radius="0.1"/>
+			</geometry>
+		</visual>
+
+<!--
+		<visual name="visual_mesh">
+			<origin rpy="1.5707 0 0" xyz="1.375 0 -1.825"/>
+			<geometry>
+				<mesh filename="package://kr270_description/meshes/a4.dae"/>
+			</geometry>
+		</visual>
+-->
+	</link>
+
+	<link name="a5">
+		<inertial>
+			<mass value="1"/>
+			<origin rpy="0 0 0" xyz="0 0 0"/>
+			<inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+		</inertial>
+
+		<collision name="collision_1">
+			<origin rpy="1.5707 0 0" xyz="0 -0.02 0"/>
+			<geometry>
+				<cylinder length="0.3" radius="0.125"/>
+			</geometry>
+		</collision>
+
+		<collision name="collision_2">
+			<origin rpy="0 0 0" xyz="0 0 .15"/>
+			<geometry>
+				<cylinder length="0.08" radius="0.1"/>
+			</geometry>
+		</collision>
+
+		<visual name="visual_collision_1">
+			<origin rpy="1.5707 0 0" xyz="0 -0.02 0"/>
+			<geometry>
+				<cylinder length="0.3" radius="0.125"/>
+			</geometry>
+		</visual>
+
+		<visual name="visual_collision_2">
+			<origin rpy="0 0 0" xyz="0 0 .15"/>
+			<geometry>
+				<cylinder length="0.08" radius="0.1"/>
+			</geometry>
+		</visual>
+
+<!--
+		<visual name="visual_mesh">
+			<origin rpy="1.5707 0 0" xyz="1.55 0 -1.825"/>
+			<geometry>
+				<mesh filename="package://kr270_description/meshes/a5.dae"/>
+			</geometry>
+		</visual>
+-->
+	</link>
+
+<!------------------------------------ Joints ----------------------------------->
+
+	<joint name="joint_base" type="fixed">
+		<parent link="world"/>
+		<child link="socket"/>
+	</joint>
+	
+	<joint name="joint_a1" type="revolute">
+		<parent link="socket"/>
+		<child link="a1"/>
+		<origin rpy="0 0 0" xyz="0 0 0.25"/>
+		<axis xyz="0 0 1"/>
+		<limit effort="100.0" lower="-3.2289" upper="3.2289" velocity="100.0"/>
+	</joint>
+
+	<joint name="joint_a2" type="revolute">
+		<parent link="a1"/>
+		<child link="a2"/>
+		<origin rpy="0 0 0" xyz="-0.35 0.3 0.4"/>
+		<axis xyz="0 1 0"/>
+		<limit effort="100.0" lower="-1.484" upper="0.873" velocity="100.0"/>
+	</joint>
+
+	<joint name="joint_a3" type="revolute">
+		<parent link="a2"/>
+		<child link="a3"/>
+		<origin rpy="0 0 0" xyz="0 -0.3 1.15"/>
+		<axis xyz="0 1 0"/>
+		<limit effort="100.0" lower="-1.1345" upper="3.665" velocity="100.0"/>
+	</joint>
+
+	<joint name="joint_a4" type="revolute">
+		<parent link="a3"/>
+		<child link="a4"/>
+		<origin rpy="0 0 0" xyz="-1 0 0"/>
+		<axis xyz="1 0 0"/>
+		<limit effort="100.0" lower="-6.109" upper="6.109" velocity="100.0"/>
+	</joint>
+
+	<joint name="joint_a5" type="revolute">
+		<parent link="a4"/>
+		<child link="a5"/>
+		<origin rpy="0 0 0" xyz="-0.175 0 0"/>
+		<axis xyz="0 1 0"/>
+		<limit effort="100.0" lower="-2.138" upper="2.138" velocity="100.0"/>
+	</joint>
+
+<!------------------------------------ Plugins -----------------------------------
+
+	<gazebo>
+		<plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+			<robotNamespace>/kr270</robotNamespace>
+		</plugin>
+	</gazebo>
+	
+<!------------------------------------ Transmissions ----------------------------------->
+
+	<transmission name="transmission_a1">
+		<type>transmission_interface/SimpleTransmission</type>
+		<joint name="a1">
+			<hardwareInterface>EffortJointInterface</hardwareInterface>
+		</joint>
+		<actuator name="motor_a1">
+			<hardwareInterface>EffortJointInterface</hardwareInterface>
+		</actuator>
+	</transmission>
+
+	<transmission name="transmission_a2">
+		<type>transmission_interface/SimpleTransmission</type>
+		<joint name="a2">
+			<hardwareInterface>EffortJointInterface</hardwareInterface>
+		</joint>
+		<actuator name="motor_a2">
+			<hardwareInterface>EffortJointInterface</hardwareInterface>
+		</actuator>
+	</transmission>
+
+	<transmission name="transmission_a3">
+		<type>transmission_interface/SimpleTransmission</type>
+		<joint name="a3">
+			<hardwareInterface>EffortJointInterface</hardwareInterface>
+		</joint>
+		<actuator name="motor_a3">
+			<hardwareInterface>EffortJointInterface</hardwareInterface>
+		</actuator>
+	</transmission>
+
+	<transmission name="transmission_a4">
+		<type>transmission_interface/SimpleTransmission</type>
+		<joint name="a4">
+			<hardwareInterface>EffortJointInterface</hardwareInterface>
+		</joint>
+		<actuator name="motor_a4">
+			<hardwareInterface>EffortJointInterface</hardwareInterface>
+		</actuator>
+	</transmission>
+
+	<transmission name="transmission_a5">
+		<type>transmission_interface/SimpleTransmission</type>
+		<joint name="a5">
+			<hardwareInterface>EffortJointInterface</hardwareInterface>
+		</joint>
+		<actuator name="motor_a5">
+			<hardwareInterface>EffortJointInterface</hardwareInterface>
+		</actuator>
+	</transmission>
+
+</robot>
