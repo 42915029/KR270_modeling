@@ -1,5 +1,8 @@
 <launch>
 
+  <include file="$(find kr270_gazebo)/launch/kr270.launch">
+  </include>
+
   <!-- Load joint controller configurations from YAML file to parameter server -->
   <rosparam file="$(find kr270_control)/config/kr270_control.yaml" command="load"/>
 
@@ -12,5 +15,8 @@
     respawn="false" output="screen">
     <remap from="/joint_states" to="/kr270/joint_states" />
   </node>
+
+  <!-- start rqt to visualise controllers -->
+  <node name="rqt" pkg="rqt_gui" type="rqt_gui"/>
 
 </launch>
