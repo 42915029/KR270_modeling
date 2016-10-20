@@ -1,0 +1,1 @@
+for f in generators/*.py; do python "$f"; done
