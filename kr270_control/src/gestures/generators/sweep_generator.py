@@ -16,11 +16,11 @@ def generateTrajectory():
     for i in range (n):
         if i <= 50:
             p = JointTrajectoryPoint()
-            x1 =  0.05*i
-            x2 =  0.05*i
-            x3 =  0.05*i
-            x4 =  0.1*i
-            x5 =  0.05*i
+            x1 =  0.0646*i
+            x2 =  0.0175*i
+            x3 =  0.0733*i
+            x4 =  0.1222*i
+            x5 =  0.0113*i
 
             p.positions.append(x1)
             p.positions.append(x2)
@@ -34,11 +34,11 @@ def generateTrajectory():
         else:
             if i <= 150:
                 p = JointTrajectoryPoint()
-                x1 =  0.05*(100-i)
-                x2 =  0.05*(100-i)
-                x3 =  0.05*(100-i)
-                x4 =  0.1*(100-i)
-                x5 =  0.05*(100-i)
+                x1 =  0.1292*(100-i)
+                x2 =  0.0471*(100-i)
+                x3 =  0.0960*(100-i)
+                x4 =  0.2444*(100-i)
+                x5 =  0.0843*(100-i)
 
                 p.positions.append(x1)
                 p.positions.append(x2)
@@ -51,11 +51,11 @@ def generateTrajectory():
                 jt[i].time_from_start = rospy.Duration.from_sec(dt * (i+1))
             else:
                 p = JointTrajectoryPoint()
-                x1 =  -0.05*(200-i)
-                x2 =  -0.05*(200-i)
-                x3 =  -0.05*(200-i)
-                x4 =  -0.1*(200-i)
-                x5 =  -0.05*(200-i)
+                x1 =  -0.0646*(200-i)
+                x2 =  -0.0297*(200-i)
+                x3 =  -0.0227*(200-i)
+                x4 =  -0.1222*(200-i)
+                x5 =  -0.0742*(200-i)
 
                 p.positions.append(x1)
                 p.positions.append(x2)
@@ -90,7 +90,7 @@ def saveTrajectory(jt):
 
 if __name__ == '__main__':
 
-    traj_name = __file__[:-13]
+    traj_name = __file__[11:-13]
 
     try:
         generateTrajectory()

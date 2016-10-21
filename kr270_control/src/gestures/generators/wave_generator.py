@@ -19,8 +19,8 @@ def generateTrajectory():
             x1 =  0.05*i
             x2 =  0.05*i
             x3 =  0.05*i
-            x4 =  0.1*i
-            x5 =  0.05*i
+            x4 =  0
+            x5 =  0
 
             p.positions.append(x1)
             p.positions.append(x2)
@@ -37,8 +37,8 @@ def generateTrajectory():
                 x1 =  0.05*(100-i)
                 x2 =  0.05*(100-i)
                 x3 =  0.05*(100-i)
-                x4 =  0.1*(100-i)
-                x5 =  0.05*(100-i)
+                x4 =  0
+                x5 =  0
 
                 p.positions.append(x1)
                 p.positions.append(x2)
@@ -54,8 +54,8 @@ def generateTrajectory():
                 x1 =  -0.05*(200-i)
                 x2 =  -0.05*(200-i)
                 x3 =  -0.05*(200-i)
-                x4 =  -0.1*(200-i)
-                x5 =  -0.05*(200-i)
+                x4 =  -0
+                x5 =  -0
 
                 p.positions.append(x1)
                 p.positions.append(x2)
@@ -90,7 +90,7 @@ def saveTrajectory(jt):
 
 if __name__ == '__main__':
 
-    traj_name = __file__[:-13]
+    traj_name = __file__[11:-13]
 
     try:
         generateTrajectory()
