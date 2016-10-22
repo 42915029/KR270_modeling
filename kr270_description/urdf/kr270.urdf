@@ -25,7 +25,6 @@
 				<box size=".3 .3 .3"/>
 			</geometry>
 		</collision>
-
 		<visual name="visual_collision_1">
 			<origin rpy="0 0 0" xyz="0 0 0.1"/>
 			<geometry>
@@ -40,14 +39,13 @@
 			</geometry>
 		</visual>
 
-<!--
 		<visual name="visual_mesh">
-			<origin rpy="1.5707 0 0" xyz="0 0 0"/>
+			<origin rpy="0 0 3.1416" xyz="0 0 0"/>
 			<geometry>
-				<mesh filename="package://kr270_description/meshes/socket.dae"/>
+				<mesh filename="package://kr270_description/meshes/Socket.dae" scale="0.03937 0.03937 0.03937"/>
 			</geometry>
 		</visual>
--->
+
 	</link>
 
 	<link name="a1">
@@ -99,14 +97,13 @@
 			</geometry>
 		</visual>
 
-<!--
 		<visual name="visual_mesh">
-			<origin rpy="1.5707 0 0" xyz="0 0 0"/>
+			<origin rpy="0 0 3.1416" xyz="0 0 0"/>
 			<geometry>
-				<mesh filename="package://kr270_description/meshes/a1.dae"/>
+				<mesh filename="package://kr270_description/meshes/A1.dae" scale="0.03937 0.03937 0.03937"/>
 			</geometry>
 		</visual>
--->
+
 	</link>
 
 	<link name="a2">
@@ -144,14 +141,12 @@
 			</geometry>
 		</visual>
 
-<!--
 		<visual name="visual_mesh">
-			<origin rpy="1.5707 0 0" xyz="0 -.3 0"/>
+			<origin rpy="0 0 3.1416" xyz="0 -.3 0"/>
 			<geometry>
-				<mesh filename="package://kr270_description/meshes/a2.dae"/>
+				<mesh filename="package://kr270_description/meshes/A2.dae" scale="0.03937 0.03937 0.03937"/>
 			</geometry>
 		</visual>
--->
 	</link>
 
 	<link name="a3">
@@ -189,14 +184,12 @@
 			</geometry>
 		</visual>
 
-<!--
 		<visual name="visual_mesh">
-			<origin rpy="1.5707 0 0" xyz=".35 0 -1.825"/>
+			<origin rpy="0 0 3.1416" xyz=".35 0 -1.825"/>
 			<geometry>
-				<mesh filename="package://kr270_description/meshes/a3.dae"/>
+				<mesh filename="package://kr270_description/meshes/A3.dae" scale="0.03937 0.03937 0.03937"/>
 			</geometry>
 		</visual>
--->
 	</link>
 
 	<link name="a4">
@@ -220,14 +213,12 @@
 			</geometry>
 		</visual>
 
-<!--
 		<visual name="visual_mesh">
-			<origin rpy="1.5707 0 0" xyz="1.375 0 -1.825"/>
+			<origin rpy="0 0 3.1416" xyz="1.375 0 -1.825"/>
 			<geometry>
-				<mesh filename="package://kr270_description/meshes/a4.dae"/>
+				<mesh filename="package://kr270_description/meshes/A4.dae" scale="0.03937 0.03937 0.03937"/>
 			</geometry>
 		</visual>
--->
 	</link>
 
 	<link name="a5">
@@ -265,14 +256,12 @@
 			</geometry>
 		</visual>
 
-<!--
 		<visual name="visual_mesh">
-			<origin rpy="1.5707 0 0" xyz="1.55 0 -1.825"/>
+			<origin rpy="0 0 3.1416" xyz="1.55 0 -1.825"/>
 			<geometry>
-				<mesh filename="package://kr270_description/meshes/a5.dae"/>
+				<mesh filename="package://kr270_description/meshes/A5.dae" scale="0.03937 0.03937 0.03937"/>
 			</geometry>
 		</visual>
--->
 	</link>
 
 <!-- Joints -->
@@ -312,7 +301,6 @@
 		<origin rpy="0 0 0" xyz="-1 0 0"/>
 		<axis xyz="1 0 0"/>
 		<limit effort="10000.0" lower="-6.109" upper="6.109" velocity="100.0"/>
-		<!--limit effort="10000.0" lower="-3" upper="3" velocity="100.0"/-->
 	</joint>
 
 	<joint name="joint_a5" type="revolute">
