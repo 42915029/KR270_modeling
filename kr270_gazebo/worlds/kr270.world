@@ -1,11 +1,84 @@
 <?xml version="1.0" ?>
 <sdf version="1.4">
-  <world name="default">
+  <world name="KR270 Simulation">
+
+<!--
     <include>
       <uri>model://ground_plane</uri>
     </include>
-    <include>
-      <uri>model://sun</uri>
-    </include>
+-->
+
+    <light type="point" name="light_1">
+		<pose>3 3 4 0 0 0</pose>
+		<diffuse>.9 .9 .9 1.0</diffuse>
+		<specular>0.1 0.1 0.1 1</specular>
+		<attenuation>
+			<range>100000</range>
+			<linear>0</linear>
+	        <constant>1</constant>
+		</attenuation>
+    	<cast_shadows>false</cast_shadows>
+    </light>
+    
+    <light type="point" name="light_2">
+		<pose>3 -3 4 0 0 0</pose>
+		<diffuse>.9 .9 .9 1.0</diffuse>
+		<specular>.1 .1 .1 1</specular>
+		<attenuation>
+			<range>100000</range>
+			<linear>0</linear>
+	        <constant>1</constant>
+		</attenuation>
+    	<cast_shadows>false</cast_shadows>
+    </light>
+    
+    <light type="point" name="light_3">
+		<pose>-3 3 4 0 0 0</pose>
+		<diffuse>.9 .9 .9 1.0</diffuse>
+		<specular>.1 .1 .1 1</specular>
+		<attenuation>
+			<range>100000</range>
+			<linear>0</linear>
+	        <constant>1</constant>
+		</attenuation>
+    	<cast_shadows>false</cast_shadows>
+    </light>
+    
+    <light type="point" name="light_4">
+		<pose>-3 -3 4 0 0 0</pose>
+		<diffuse>.9 .9 .9 1.0</diffuse>
+		<specular>.1 .1 .1 1</specular>
+		<attenuation>
+			<range>100000</range>
+			<linear>0</linear>
+	        <constant>1</constant>
+		</attenuation>
+    	<cast_shadows>false</cast_shadows>
+    </light>
+    
+    <light type="point" name="light_5">
+		<pose>0 0 7 0 0 0</pose>
+		<diffuse>.9 .9 .9 1.0</diffuse>
+		<specular>.1 .1 .1 1</specular>
+		<attenuation>
+			<range>100000</range>
+			<linear>0</linear>
+	        <constant>1</constant>
+		</attenuation>
+    	<cast_shadows>false</cast_shadows>
+    </light>
+    
+    <light type="point" name="light_6">
+		<pose>0 0 1 0 0 0</pose>
+		<diffuse>.9 .9 .9 1.0</diffuse>
+		<specular>.1 .1 .1 1</specular>
+		<attenuation>
+			<range>100000</range>
+			<linear>0</linear>
+	        <constant>1</constant>
+		</attenuation>
+    	<cast_shadows>false</cast_shadows>
+    </light>
+
   </world>
 </sdf>
