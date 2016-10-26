@@ -2,79 +2,82 @@
 <sdf version="1.4">
   <world name="KR270 Simulation">
 
-<!--
     <include>
       <uri>model://ground_plane</uri>
     </include>
--->
+
+    <include>
+      <uri>model://DLR_facility</uri>
+      <pose>-11 0 0 0 0 0</pose>
+    </include>
 
     <light type="point" name="light_1">
-		<pose>3 3 4 0 0 0</pose>
+		<pose>1.5 1.5 4 0 0 0</pose>
 		<diffuse>.9 .9 .9 1.0</diffuse>
 		<specular>0.1 0.1 0.1 1</specular>
 		<attenuation>
 			<range>100000</range>
-			<linear>0</linear>
+			<linear>.2</linear>
 	        <constant>1</constant>
 		</attenuation>
     	<cast_shadows>false</cast_shadows>
     </light>
     
     <light type="point" name="light_2">
-		<pose>3 -3 4 0 0 0</pose>
+		<pose>1.5 -1.5 4 0 0 0</pose>
 		<diffuse>.9 .9 .9 1.0</diffuse>
 		<specular>.1 .1 .1 1</specular>
 		<attenuation>
 			<range>100000</range>
-			<linear>0</linear>
+			<linear>.2</linear>
 	        <constant>1</constant>
 		</attenuation>
     	<cast_shadows>false</cast_shadows>
     </light>
     
     <light type="point" name="light_3">
-		<pose>-3 3 4 0 0 0</pose>
+		<pose>-1.5 1.5 4 0 0 0</pose>
 		<diffuse>.9 .9 .9 1.0</diffuse>
 		<specular>.1 .1 .1 1</specular>
 		<attenuation>
 			<range>100000</range>
-			<linear>0</linear>
+			<linear>.2</linear>
 	        <constant>1</constant>
 		</attenuation>
     	<cast_shadows>false</cast_shadows>
     </light>
     
     <light type="point" name="light_4">
-		<pose>-3 -3 4 0 0 0</pose>
+		<pose>-1.5 -1.5 4 0 0 0</pose>
 		<diffuse>.9 .9 .9 1.0</diffuse>
 		<specular>.1 .1 .1 1</specular>
 		<attenuation>
 			<range>100000</range>
-			<linear>0</linear>
+			<linear>.2</linear>
 	        <constant>1</constant>
 		</attenuation>
     	<cast_shadows>false</cast_shadows>
     </light>
     
     <light type="point" name="light_5">
-		<pose>0 0 7 0 0 0</pose>
+		<pose>0 0 5.5 0 0 0</pose>
 		<diffuse>.9 .9 .9 1.0</diffuse>
 		<specular>.1 .1 .1 1</specular>
 		<attenuation>
 			<range>100000</range>
-			<linear>0</linear>
+			<linear>.2</linear>
 	        <constant>1</constant>
 		</attenuation>
     	<cast_shadows>false</cast_shadows>
     </light>
     
     <light type="point" name="light_6">
-		<pose>0 0 1 0 0 0</pose>
+		<pose>0 0 2.5 0 0 0</pose>
 		<diffuse>.9 .9 .9 1.0</diffuse>
 		<specular>.1 .1 .1 1</specular>
 		<attenuation>
 			<range>100000</range>
-			<linear>0</linear>
+			<linear>.2</linear>
 	        <constant>1</constant>
 		</attenuation>
     	<cast_shadows>false</cast_shadows>
