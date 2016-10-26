@@ -2,6 +2,21 @@
 <sdf version="1.4">
   <world name="KR270 Simulation">
 
+  	<scene>
+  		<sky>
+  			<clouds>
+  				<speed>12</speed>
+  			</clouds>
+  		</sky>
+  		<grid>false</grid>
+  	</scene>
+
+  	<gui>
+  		<camera name="user_camera">
+  			<pose>15.25 4.6 1.8 0 0.0516 -2.883</pose>
+  		</camera>
+  	</gui>
+
     <include>
       <uri>model://ground_plane</uri>
     </include>
@@ -11,77 +26,161 @@
       <pose>-11 0 0 0 0 0</pose>
     </include>
 
-    <light type="point" name="light_1">
-		<pose>1.5 1.5 4 0 0 0</pose>
-		<diffuse>.9 .9 .9 1.0</diffuse>
+    <include>
+      <uri>model://DLR_exterior</uri>
+    </include>
+
+<!-- Scene lighting --
+
+    <light type="directional" name="light_down">
+		<pose>0 0 9 0 0 0</pose>
+		<diffuse>1 1 1 1</diffuse>
+		<specular>.1 .1 .1 1</specular>
+		<attenuation>
+			<range>50</range>
+			<linear>1</linear>
+	        <constant>.8</constant>
+		</attenuation>
+    	<cast_shadows>false</cast_shadows>
+    	<direction>0 0 -1</direction>
+    </light>
+
+    <light type="directional" name="light_up">
+		<pose>0 0 9 0 0 0</pose>
+		<diffuse>1 1 1 1</diffuse>
+		<specular>.1 .1 .1 1</specular>
+		<attenuation>
+			<range>50</range>
+			<linear>1</linear>
+	        <constant>.8</constant>
+		</attenuation>
+    	<cast_shadows>false</cast_shadows>
+    	<direction>0 0 1</direction>
+    </light>
+
+<!-- Roof lighting -->
+
+    <light type="point" name="roof_light_1">
+		<pose>17 6 5.5 0 0 0</pose>
+		<diffuse>1 1 1 1</diffuse>
 		<specular>0.1 0.1 0.1 1</specular>
 		<attenuation>
-			<range>100000</range>
-			<linear>.2</linear>
-	        <constant>1</constant>
-		</attenuation>
-    	<cast_shadows>false</cast_shadows>
-    </light>
-    
-    <light type="point" name="light_2">
-		<pose>1.5 -1.5 4 0 0 0</pose>
-		<diffuse>.9 .9 .9 1.0</diffuse>
-		<specular>.1 .1 .1 1</specular>
-		<attenuation>
-			<range>100000</range>
-			<linear>.2</linear>
-	        <constant>1</constant>
-		</attenuation>
-    	<cast_shadows>false</cast_shadows>
-    </light>
-    
-    <light type="point" name="light_3">
-		<pose>-1.5 1.5 4 0 0 0</pose>
-		<diffuse>.9 .9 .9 1.0</diffuse>
-		<specular>.1 .1 .1 1</specular>
-		<attenuation>
-			<range>100000</range>
-			<linear>.2</linear>
-	        <constant>1</constant>
-		</attenuation>
-    	<cast_shadows>false</cast_shadows>
-    </light>
-    
-    <light type="point" name="light_4">
-		<pose>-1.5 -1.5 4 0 0 0</pose>
-		<diffuse>.9 .9 .9 1.0</diffuse>
-		<specular>.1 .1 .1 1</specular>
-		<attenuation>
-			<range>100000</range>
-			<linear>.2</linear>
-	        <constant>1</constant>
-		</attenuation>
-    	<cast_shadows>false</cast_shadows>
-    </light>
-    
-    <light type="point" name="light_5">
-		<pose>0 0 5.5 0 0 0</pose>
-		<diffuse>.9 .9 .9 1.0</diffuse>
-		<specular>.1 .1 .1 1</specular>
-		<attenuation>
-			<range>100000</range>
-			<linear>.2</linear>
-	        <constant>1</constant>
-		</attenuation>
-    	<cast_shadows>false</cast_shadows>
-    </light>
-    
-    <light type="point" name="light_6">
-		<pose>0 0 2.5 0 0 0</pose>
-		<diffuse>.9 .9 .9 1.0</diffuse>
-		<specular>.1 .1 .1 1</specular>
-		<attenuation>
-			<range>100000</range>
-			<linear>.2</linear>
-	        <constant>1</constant>
+			<range>50</range>
+			<linear>.1</linear>
+	        <constant>.8</constant>
 		</attenuation>
     	<cast_shadows>false</cast_shadows>
     </light>
 
+    <light type="point" name="roof_light_2">
+		<pose>17 -6 5.5 0 0 0</pose>
+		<diffuse>1 1 1 1</diffuse>
+		<specular>.1 .1 .1 1</specular>
+		<attenuation>
+			<range>50</range>
+			<linear>.1</linear>
+	        <constant>.8</constant>
+		</attenuation>
+    	<cast_shadows>false</cast_shadows>
+    </light>
+    
+    <light type="point" name="roof_light_3">
+		<pose>-7 6 5.5 0 0 0</pose>
+		<diffuse>1 1 1 1</diffuse>
+		<specular>.1 .1 .1 1</specular>
+		<attenuation>
+			<range>50</range>
+			<linear>.1</linear>
+	        <constant>.8</constant>
+		</attenuation>
+    	<cast_shadows>false</cast_shadows>
+    </light>
+    
+
+    <light type="point" name="roof_light_4">
+		<pose>-7 -6 5.5 0 0 0</pose>
+		<diffuse>1 1 1 1</diffuse>
+		<specular>.1 .1 .1 1</specular>
+		<attenuation>
+			<range>50</range>
+			<linear>.1</linear>
+	        <constant>.8</constant>
+		</attenuation>
+    	<cast_shadows>false</cast_shadows>
+    </light>
+
+<!-- Robot lighting -->
+
+	<light type="spot" name="spotlight_1">
+		<pose>0 8 4 0 0 0</pose>
+		<diffuse>1 1 1 1</diffuse>
+		<specular>.4 .4 .4 1</specular>
+		<attenuation>
+			<range>200</range>
+			<linear>0</linear>
+	        <constant>1</constant>
+		</attenuation>
+    	<cast_shadows>false</cast_shadows>
+    	<direction>0 -1 0</direction>
+    	<spot>
+    		<inner_angle>0.3</inner_angle>
+    		<outer_angle>0.5</outer_angle>
+    		<falloff>1</falloff>
+    	</spot>
+    </light>
+    
+    <light type="spot" name="spotlight_2">
+		<pose>8 0 4 0 0 0</pose>
+		<diffuse>1 1 1 1</diffuse>
+		<specular>.4 .4 .4 1</specular>
+		<attenuation>
+			<range>200</range>
+			<linear>0</linear>
+	        <constant>1</constant>
+		</attenuation>
+    	<cast_shadows>false</cast_shadows>
+    	<direction>-1 0 0</direction>
+    	<spot>
+    		<inner_angle>0.3</inner_angle>
+    		<outer_angle>0.5</outer_angle>
+    		<falloff>1</falloff>
+    	</spot>
+    </light>
+    
+    <light type="spot" name="spotlight_3">
+		<pose>-8 0 4 0 0 0</pose>
+		<diffuse>1 1 1 1</diffuse>
+		<specular>.4 .4 .4 1</specular>
+		<attenuation>
+			<range>200</range>
+			<linear>0</linear>
+	        <constant>1</constant>
+		</attenuation>
+    	<cast_shadows>false</cast_shadows>
+    	<direction>1 0 0</direction>
+    	<spot>
+    		<inner_angle>0.3</inner_angle>
+    		<outer_angle>0.5</outer_angle>
+    		<falloff>1</falloff>
+    	</spot>
+    </light>
+    
+    <light type="spot" name="spotlight_4">
+		<pose>0 -8 4 0 0 0</pose>
+		<diffuse>1 1 1 1</diffuse>
+		<specular>.4 .4 .4 1</specular>
+		<attenuation>
+			<range>200</range>
+			<linear>0</linear>
+	        <constant>1</constant>
+		</attenuation>
+    	<cast_shadows>false</cast_shadows>
+    	<direction>0 1 0</direction>
+    	<spot>
+    		<inner_angle>0.3</inner_angle>
+    		<outer_angle>0.5</outer_angle>
+    		<falloff>1</falloff>
+    	</spot>
+    </light>
   </world>
 </sdf>

@@ -47,6 +47,6 @@
 
   <param name="robot_description" textfile="$(find kr270_description)/urdf/kr270.urdf"/>
 
-  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-file $(find kr270_description)/urdf/kr270.urdf -urdf -z 5.1 -R 3.1416 -model KR270" />
+  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-file $(find kr270_description)/urdf/kr270.urdf -urdf -z 5.1 -R 3.1416 -Y 3.1416 -model KR270" />
 
 </launch>
